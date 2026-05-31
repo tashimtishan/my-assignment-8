@@ -12,9 +12,9 @@ const Navbar = () => {
         </div>
         <div>
         <ul className='flex gap-5 text-white font-semibold'>
-            <Link href={""}><li>Home</li></Link>
-            <Link href={""}><li>Courses</li></Link>
-            <Link href={""}><li>My Profile</li></Link>
+            <Link href={"/"}><li>Home</li></Link>
+            <Link href={"/Courses"}><li>Courses</li></Link>
+            <Link href={"/MyProfile"}><li>My Profile</li></Link>
         </ul>
         </div>
         <div className='flex gap-5 items-center'>

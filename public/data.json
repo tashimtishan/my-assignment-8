@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "Complete Web Development Bootcamp",
+    "instructor": "John Doe",
+    "duration": "20 hours",
+    "rating": 4.8,
+    "level": "Beginner",
+    "description": "Learn full-stack web development from scratch including HTML, CSS, JavaScript, React, and Node.js.",
+    "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600",
+    "category": "Development"
+  },
+  {
+    "id": 2,
+    "title": "UI/UX Design Masterclass bootcamp",
+    "instructor": "Sarah Kim",
+    "duration": "15 hours",
+    "rating": 4.7,
+    "level": "Intermediate",
+    "description": "Master the principles of user interface and user experience design using Figma and Adobe XD.",
+    "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600",
+    "category": "Design"
+  },
+  {
+    "id": 3,
+    "title": "Python for Data Science & Machine Learning",
+    "instructor": "Michael Chen",
+    "duration": "30 hours",
+    "rating": 4.9,
+    "level": "Intermediate",
+    "description": "Dive into data analysis, visualization, and machine learning using Python, Pandas, and Scikit-learn.",
+    "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600",
+    "category": "Data Science"
+  },
+  {
+    "id": 4,
+    "title": "Digital Marketing & SEO Strategy",
+    "instructor": "Emily Carter",
+    "duration": "12 hours",
+    "rating": 4.5,
+    "level": "Beginner",
+    "description": "Learn modern digital marketing strategies, SEO techniques, social media marketing, and Google Ads.",
+    "image": "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=600",
+    "category": "Marketing"
+  },
+  {
+    "id": 5,
+    "title": "AWS Cloud Practitioner & Solutions Architect",
+    "instructor": "David Patel",
+    "duration": "25 hours",
+    "rating": 4.6,
+    "level": "Advanced",
+    "description": "Prepare for AWS certifications while learning cloud infrastructure, deployment, and security best practices.",
+    "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600",
+    "category": "Cloud Computing"
+  },
+  {
+    "id": 6,
+    "title": "Mobile App Development with Flutter",
+    "instructor": "Aisha Nguyen",
+    "duration": "18 hours",
+    "rating": 4.7,
+    "level": "Intermediate",
+    "description": "Build beautiful cross-platform iOS and Android apps using Flutter and Dart from the ground up.",
+    "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600",
+    "category": "Mobile Development"
+  }
+]
