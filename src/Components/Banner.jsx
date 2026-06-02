@@ -1,7 +1,7 @@
 import {ArrowRight} from '@gravity-ui/icons';
 const Banner = () => {
     return (
-        <div className="bg-sky-300 p-20 ">
+        <div className="bg-sky-300 p-20 pb-30">
          <div className="flex container mx-auto">
               <div>
             <span className=" px-3 py-2 rounded-full bg-linear-to-r from-blue-900 via-blue-700 to-cyan-500 text-white font-semibold">Learn From Industry Experts</span>

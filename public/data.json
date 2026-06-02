@@ -8,7 +8,9 @@
     "level": "Beginner",
     "description": "Learn full-stack web development from scratch including HTML, CSS, JavaScript, React, and Node.js.",
     "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600",
-    "category": "Development"
+    "category": "Development",
+    "instructor_photo":"/img4.png",
+     "major":"Web Developer"
   },
   {
     "id": 2,
@@ -19,7 +21,9 @@
     "level": "Intermediate",
     "description": "Master the principles of user interface and user experience design using Figma and Adobe XD.",
     "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600",
-    "category": "Design"
+    "category": "Design",
+    "instructor_photo":"/img5.png",
+     "major":"UI/UX Designer"
   },
   {
     "id": 3,
@@ -30,7 +34,9 @@
     "level": "Intermediate",
     "description": "Dive into data analysis, visualization, and machine learning using Python, Pandas, and Scikit-learn.",
     "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600",
-    "category": "Data Science"
+    "category": "Data Science",
+    "instructor_photo":"/img6.png",
+    "major": "Digital Marketing Expert"
   },
   {
     "id": 4,
@@ -41,7 +47,10 @@
     "level": "Beginner",
     "description": "Learn modern digital marketing strategies, SEO techniques, social media marketing, and Google Ads.",
     "image": "https://images.unsplash.com/photo-1432888622747-4eb9a8efeb07?w=600",
-    "category": "Marketing"
+    "category": "Marketing",
+    "instructor_photo":"/img7.png",
+    "major":"Content Strategist"
+    
   },
   {
     "id": 5,
@@ -52,7 +61,9 @@
     "level": "Advanced",
     "description": "Prepare for AWS certifications while learning cloud infrastructure, deployment, and security best practices.",
     "image": "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600",
-    "category": "Cloud Computing"
+    "category": "Cloud Computing",
+    "instructor_photo":"/img8.png",
+    "major":"graphics designer"
   },
   {
     "id": 6,
@@ -63,6 +74,7 @@
     "level": "Intermediate",
     "description": "Build beautiful cross-platform iOS and Android apps using Flutter and Dart from the ground up.",
     "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600",
-    "category": "Mobile Development"
+    "category": "Mobile Development",
+    "instructor_photo":"/img2.png"
   }
 ]

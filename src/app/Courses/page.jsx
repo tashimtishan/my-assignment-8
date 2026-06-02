@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Coursepage = async() => {
     const fetchdata= await fetch("http://localhost:3000/data.json")
     const datas=await fetchdata.json();
@@ -10,7 +12,7 @@ const Coursepage = async() => {
                     <img src={data.image} className="w-full h-48 object-cover" alt="" />
                     <p className="font-bold text-2xl mt-5">{data.title}</p>
                     <p className="mt-4 text-gray-600 font-semibold">{data.description}</p>
-                    <button className="btn w-full mt-10 btn-info">View Details</button>
+                    <Link href={`/Courses/${data.id}`}><button className="btn w-full mt-10 btn-info">View Details</button></Link>
                 </div>
                ) 
             })}
