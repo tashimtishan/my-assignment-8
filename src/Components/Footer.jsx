@@ -6,7 +6,7 @@ import {ClockFill} from '@gravity-ui/icons';
 
 const Footer = () => {
     return (
-       <footer className="bg-[#212a38] text-white p-20">
+        <footer className="bg-[#212a38] text-white p-8 md:p-20">
        <div className="max-w-7xl gap-30 mx-auto flex">
          <div className="text-xl">
        <div className="flex items-center gap-2">
