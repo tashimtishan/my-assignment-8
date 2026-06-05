@@ -12,10 +12,12 @@ const Navbar = () => {
     <nav className='bg-linear-to-r from-blue-900 via-blue-700 to-cyan-500'>
       <div className='container mx-auto px-5'>
         <div className='flex justify-between items-center py-4'>
+          <Link href={"/"}>
           <div className='flex items-center gap-2 text-white'>
             <GraduationCap className='h-8 w-8' />
             <p className='font-bold text-xl'>SkillSphere</p>
           </div>
+          </Link>
           <ul className='hidden md:flex text-white font-semibold gap-5'>
             <Link href="/"><li className="hover:text-cyan-200 transition-colors">Home</li></Link>
             <Link href="/Courses"><li className="hover:text-cyan-200 transition-colors">Courses</li></Link>

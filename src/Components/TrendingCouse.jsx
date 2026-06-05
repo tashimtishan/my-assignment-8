@@ -14,11 +14,11 @@ const TrendingCouse = async() => {
          <div className="grid grid-cols-1 p-4 md:grid-cols-3 container mx-auto gap-5 mt-10 mb-10">
              {datas.slice(3,6).map((data)=>{
                return(
-                <div key={data.id} className="shadow-lg rounded-md overflow-hidden">
+                <div key={data.id} className="shadow-lg rounded-md overflow-hidden flex flex-col h-full">
                     <img src={data.image} className="w-full h-48 object-cover" alt="" />
-                    <div className="p-8">
+                    <div className="flex flex-col flex-1 p-8">
                         <p className="font-bold text-xl mb-2">{data.title}</p>
-                    <p className="font-semibold mb-5">{data.description}</p>
+                    <p className="font-semibold mb-5 grow">{data.description}</p>
                     <div className="flex justify-between items-center">
                         <div className="flex items-center gap-2">
                         <img src={data.instructor_photo} className="w-10 h-10" alt="" />
