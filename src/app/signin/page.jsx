@@ -1,17 +1,24 @@
 'use client'
 import { authClient } from '@/lib/auth-client';
+import { useRouter } from 'next/navigation';
 import React from 'react';
 
 const Signinpage = () => {
+    const router=useRouter();
     const onSubmit=async(e)=>{
         e.preventDefault();
           const email = e.target.email.value;
           const password = e.target.password.value;
-        const {data,error}=await authClient.signUp.email({
+        const {data,error}=await authClient.signIn.email({
             password,
             email,
         })
         console.log({data,error})
+        if (error) {
+            console.error(error.message)
+        } else {
+            router.push("/")
+        }
     }
     return (
 <div className='flex justify-center mt-10'>

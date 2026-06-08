@@ -13,7 +13,7 @@ const Teacherssection = async() => {
                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 justify-items-center gap-5 mb-10">
                 {datas.slice(1,5).map((data)=>{
                     return (
-                        <div key={data.key}  className='p-6 md:p-10 w-full rounded-md shadow-xl flex flex-col items-center text-center space-y-2'>
+                        <div key={data.id}  className='p-6 md:p-10 w-full rounded-md shadow-xl flex flex-col items-center text-center space-y-2'>
                         <>
                         <img key={data.key} src={data.instructor_photo} className="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover"
                              alt="" />

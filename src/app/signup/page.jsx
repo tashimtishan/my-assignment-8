@@ -1,21 +1,33 @@
 'use client'
 import { authClient } from '@/lib/auth-client';
+import { useRouter } from 'next/navigation';
 import React from 'react';
 
 const Signuppage = () => {
+    const router=useRouter()
     const onSubmit=async(e)=>{
         e.preventDefault();
         const name=e.target.name.value;
-         const imageUrl = e.target.imageUrl.value;
+         const image = e.target.imageUrl.value;
           const email = e.target.email.value;
           const password = e.target.password.value;
+          const formdata={
+            name,
+            image,
+            password,
+            email,
+        }
+        console.log(formdata)
         const {data,error}=await authClient.signUp.email({
             name,
-            imageUrl,
+            image,
             password,
             email,
         })
         console.log({data,error})
+        if(!error){
+            router.push("/")
+        }
     }
     return (
 <div className='flex justify-center'>

@@ -9,7 +9,7 @@ const Learningjourney = () => {
                 <p className='mb-4 md:mb-5 text-base md:text-lg text-gray-300 max-w-xl mx-auto'>
                     Join thousands of learners building in-demand skills and advancing their careers.
                 </p>
-                <button className='flex items-center mx-auto font-semibold text-lg md:text-xl lg:text-2xl btn btn-success text-white'>
+                <button className='flex items-center mx-auto font-semibold text-lg md:text-xl lg:text-xl btn p-4 btn-success text-white'>
                     Join Now <ArrowRight />
                 </button>
             </div>
