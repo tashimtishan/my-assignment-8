@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+SkillSphere
 
-## Getting Started
+SkillSphere is an online learning platform where anyone can explore courses, learn from industry experts, and upgrade their skills at their own pace. whether you're into web development, design, or digital marketing — there's something here for you.
 
-First, run the development server:
+Live Site: https://my-assignment-8-two.vercel.app
 
-```bash
+
+What This Project Is About
+
+I built SkillSphere as part of my web development journey. The idea was to create a platform that feels clean, fast, and actually useful. not just another template project. It has real authentication, protected routes, a searchable course listing, and a proper user profile system.
+
+
+Key Features
+
+User Authentication: Register and sign in with email and password. Google OAuth support is also integrated.
+Protected Routes: Course details and profile pages are only accessible to logged-in users. Everyone else gets redirected to the sign in page.
+Course Listing with Search: Browse all available courses and filter them instantly by title, description, or instructor name.
+Course Details Page: Each course has its own dedicated page with full details, instructor info, and an enroll button.
+User Profile Page: After signing in, users can view their profile with their name, photo, and account information.
+Responsive Navbar: The navbar shows login/register buttons when logged out, and switches to a welcome message with the user's photo and a logout button when logged in. Works on both desktop and mobile.
+Toast Notifications: Friendly success and error messages on sign in, sign up, and logout actions.
+Loading Spinner: A smooth loader appears while course data is being fetched.
+Animations: The banner section animates in on load, and the floating skill badges bounce continuously for a lively feel.
+
+
+
+NPM Packages Used
+
+ **better-auth** — Handles all authentication, email/password and Google OAuth
+ **next** — The React framework the entire project is built on
+ **react / react-dom** — Core UI library
+ **tailwindcss** — Utility-first CSS for all styling
+ **daisyui** — Component library built on Tailwind for buttons, spinners, badges etc.
+ **motion** — Animations for the banner slide-in and floating badge bounce effects
+ **react-toastify** — Toast notifications for sign in, sign up, and logout feedback
+ **lucide-react** — Icons used in the navbar hamburger menu
+ **@gravity-ui/icons** — Additional icon set used across the project
+ **kysely** — SQL query builder used internally by Better Auth
+
+
+Pages
+
+
+/ — Homepage with banner, trending courses, teacher section, and more
+/Courses — Full course listing with live search
+/Courses/[id] — Individual course details (protected)
+/signin — Sign in page
+/signup — Registration page
+/MyProfile — User profile page (protected)
+
+
+
+Getting Started Locally
+
+bashgit clone https://github.com/tashimtishan/your-repo-name
+cd your-repo-name
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [https://skillsphareapp.vercel.app](https://skillsphareapp.vercel.app) with your browser to see the result.
+Make sure to add your .env file with the required Better Auth and Google OAuth credentials before running.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Built with by Tashim. CSE student, front-end developer, and lifelong learner.
