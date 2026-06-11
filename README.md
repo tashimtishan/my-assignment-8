@@ -1,6 +1,6 @@
 SkillSphere
 
-SkillSphere is an online learning platform where anyone can explore courses, learn from industry experts, and upgrade their skills at their own pace. whether you're into web development, design, or digital marketing — there's something here for you.
+SkillSphere is an online learning platform where anyone can explore courses, learn from industry experts, and upgrade their skills at their own pace. whether you're into web development, design, or digital marketing.and there's something here for you.
 
 Live Site: https://my-assignment-8-two.vercel.app
 
