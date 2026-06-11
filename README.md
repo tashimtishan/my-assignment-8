@@ -12,9 +12,9 @@ I built SkillSphere as part of my web development journey. The idea was to creat
 
 Key Features
 
-User Authentication: Register and sign in with email and password. Google OAuth support is also integrated.
+user Authentication: Register and sign in with email and password. Google OAuth support is also integrated.
 Protected Routes: Course details and profile pages are only accessible to logged-in users. Everyone else gets redirected to the sign in page.
-Course Listing with Search: Browse all available courses and filter them instantly by title, description, or instructor name.
+course Listing with Search: Browse all available courses and filter them instantly by title, description, or instructor name.
 Course Details Page: Each course has its own dedicated page with full details, instructor info, and an enroll button.
 User Profile Page: After signing in, users can view their profile with their name, photo, and account information.
 Responsive Navbar: The navbar shows login/register buttons when logged out, and switches to a welcome message with the user's photo and a logout button when logged in. Works on both desktop and mobile.
