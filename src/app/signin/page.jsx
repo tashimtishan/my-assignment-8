@@ -2,6 +2,8 @@
 import { authClient } from '@/lib/auth-client';
 import { useRouter } from 'next/navigation';
 import React from 'react';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Signinpage = () => {
     const router=useRouter();
@@ -15,13 +17,15 @@ const Signinpage = () => {
         })
         console.log({data,error})
         if (error) {
-            console.error(error.message)
+            toast.error("Invalid email or password")
         } else {
-            router.push("/")
+            toast.success("Welcome back!")
+            setTimeout(() => router.push("/"), 1500)
         }
     }
     return (
 <div className='flex justify-center mt-10'>
+     <ToastContainer position="top-right" autoClose={1500} />
  <form onSubmit={onSubmit}>
   <fieldset className="fieldset bg-base-200 border-base-300 w-96 rounded-box border p-5 mb-10">
   <legend className="fieldset-legend font-bold text-2xl">Sign In</legend>

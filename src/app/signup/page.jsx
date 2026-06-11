@@ -2,6 +2,8 @@
 import { authClient } from '@/lib/auth-client';
 import { useRouter } from 'next/navigation';
 import React from 'react';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Signuppage = () => {
     const router=useRouter()
@@ -25,12 +27,16 @@ const Signuppage = () => {
             email,
         })
         console.log({data,error})
-        if(!error){
-            router.push("/signin")
+         if (error) {
+            toast.error(error.message)
+        } else {
+            toast.success("Registration successful!")
+            setTimeout(() => router.push("/signin"), 1500)
         }
     }
     return (
-<div className='flex justify-center'>
+<div className='flex justify-center mt-10'>
+      <ToastContainer position="top-right" autoClose={1500} />
  <form onSubmit={onSubmit}>
   <fieldset className="fieldset bg-base-200 border-base-300 w-96 rounded-box border p-5 mb-10">
   <legend className="fieldset-legend font-bold text-2xl">Register</legend>
