@@ -32,13 +32,13 @@ const [loading, setLoading] = useState(true);
 
     return (
         <div className="max-w-7xl mx-auto px-4">
-            <div className="mt-10 flex justify-between items-center">
+          <div className="mt-10 flex flex-col gap-3 md:flex-row md:gap-0 justify-between items-center">
                 <p className="font-bold text-2xl">All Courses</p>
                 <div className="relative">
                     <span className="absolute left-2 top-1/2 -translate-y-1/2 text-gray-400">
                         <Magnifier></Magnifier>
                     </span>
-                    <input className="border border-gray-300 rounded-sm px-9 p-1" placeholder="Search Courses..." type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
+                    <input className="border border-gray-300 rounded-sm px-9 p-1 w-full md:w-auto" placeholder="Search Courses..." type="text" value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
                 </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-auto gap-3 mt-10 mb-10">
