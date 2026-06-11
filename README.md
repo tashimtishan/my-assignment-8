@@ -38,18 +38,6 @@ NPM Packages Used
  **kysely** — SQL query builder used internally by Better Auth
 
 
-Pages
-
-
-/ — Homepage with banner, trending courses, teacher section, and more
-/Courses — Full course listing with live search
-/Courses/[id] — Individual course details (protected)
-/signin — Sign in page
-/signup — Registration page
-/MyProfile — User profile page (protected)
-
-
-
 Getting Started Locally
 
 bashgit clone https://github.com/tashimtishan/your-repo-name
