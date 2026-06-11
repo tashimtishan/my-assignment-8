@@ -7,13 +7,16 @@ import { useState, useEffect, useMemo } from "react";
 const Coursepage = () => {
 const [datas, setDatas]=useState([]);
 const [searchQuery, setSearchQuery]=useState("");
+const [loading, setLoading] = useState(true);
 
     useEffect(()=>{
         fetch("http://localhost:3000/data.json")
             .then(res=>res.json())
-            .then(data=>setDatas(data));
+            .then(data=>{
+                setDatas(data);
+                 setLoading(false);
+            });
     },[]);
-
     const filtered=useMemo(()=>{
         const q=searchQuery.toLowerCase();
         return datas.filter(d=>
@@ -22,6 +25,10 @@ const [searchQuery, setSearchQuery]=useState("");
             d.instructor?.toLowerCase().includes(q)
         );
     }, [searchQuery,datas]);
+    if (loading) return (
+    <div className="flex justify-center items-center min-h-screen">
+        <span className="loading loading-spinner loading-lg text-blue-600"></span>
+    </div>)
 
     return (
         <div className="max-w-7xl mx-auto px-4">
