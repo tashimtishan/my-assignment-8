@@ -3,11 +3,21 @@ import { GraduationCap, Xmark } from '@gravity-ui/icons';
 import { ArrowRightToSquare } from '@gravity-ui/icons';
 import { PersonPlus } from '@gravity-ui/icons';
 import { Menu } from 'lucide-react';
+import Image from 'next/image';
+import { authClient } from '@/lib/auth-client';
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useState } from 'react';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const {data: session} = authClient.useSession();
+  const router = useRouter();
+
+   const handleLogout = async () => {
+    await authClient.signOut();
+    router.push('/');
+  };
   return (
     <nav className='bg-linear-to-r from-blue-900 via-blue-700 to-cyan-500'>
       <div className='container mx-auto px-5'>
@@ -23,18 +33,39 @@ const Navbar = () => {
             <Link href="/Courses"><li className="hover:text-cyan-200 transition-colors">Courses</li></Link>
             <Link href="/MyProfile"><li className="hover:text-cyan-200 transition-colors">My Profile</li></Link>
           </ul>
-          <div className='hidden md:flex gap-3 items-center'>
-            <Link href="/signin">
-              <button className='btn w-25 flex items-center gap-1'>
-                <ArrowRightToSquare />Login
-              </button>
-            </Link>
-            <Link href="/signup">
-              <button className='btn btn-info w-30 text-white flex items-center gap-1'>
-                <PersonPlus className='h-4 w-4' />Register
-              </button>
-            </Link>
+           <div className='hidden md:flex gap-3 items-center'>
+            {session ? (
+              <div className='flex items-center gap-3'>
+                {session.user.image && (
+                  <Image
+                    src={session.user.image}
+                    alt="profile"
+                    width={36}
+                    height={36}
+                    className='rounded-full object-cover'
+                  />
+                )}
+                <span className='text-white font-semibold'>Welcome, {session.user.name}</span>
+                <button onClick={handleLogout} className='btn btn-error text-white'>
+                  Logout
+                </button>
+              </div>
+            ) : (
+              <>
+                <Link href="/signin">
+                  <button className='btn w-25 flex items-center gap-1'>
+                    <ArrowRightToSquare />Login
+                  </button>
+                </Link>
+                <Link href="/signup">
+                  <button className='btn btn-info w-30 text-white flex items-center gap-1'>
+                    <PersonPlus className='h-4 w-4' />Register
+                  </button>
+                </Link>
+              </>
+            )}
           </div>
+
           <button
             className="md:hidden text-white" onClick={()=>setMenuOpen(!menuOpen)}aria-label="Toggle menu">
             {menuOpen ? <Xmark className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
@@ -51,17 +82,35 @@ const Navbar = () => {
             <Link href="/MyProfile" onClick={() => setMenuOpen(false)}>
               <p className="py-2 border-b border-white/20 hover:text-cyan-200 transition-colors">My Profile</p>
             </Link>
-            <div className="flex gap-3 pt-2">
-              <Link href="/signin" onClick={() => setMenuOpen(false)}>
-                <button className='btn flex items-center gap-1'>
-                  <ArrowRightToSquare className='h-4 w-4' />Login
-                </button>
-              </Link>
-              <Link href="/signup" onClick={() => setMenuOpen(false)}>
-                <button className="btn btn-info text-white flex items-center gap-1">
-                  <PersonPlus className='h-4 w-4' />Register
-                </button>
-              </Link>
+         <div className="flex gap-3 pt-2 items-center">
+              {session ? (
+                <div className='flex items-center gap-3'>
+                  {session.user.image && (
+                    <Image
+                      src={session.user.image}
+                      alt="profile"
+                      width={32}
+                      height={32}
+                      className='rounded-full object-cover'
+                    />
+                  )}
+                  <span className='text-white font-semibold'>Welcome, {session.user.name}</span>
+                  <button onClick={handleLogout} className='btn btn-error text-white'>Logout</button>
+                </div>
+              ) : (
+                <>
+                  <Link href="/signin" onClick={() => setMenuOpen(false)}>
+                    <button className='btn flex items-center gap-1'>
+                      <ArrowRightToSquare className='h-4 w-4' />Login
+                    </button>
+                  </Link>
+                  <Link href="/signup" onClick={() => setMenuOpen(false)}>
+                    <button className="btn btn-info text-white flex items-center gap-1">
+                      <PersonPlus className='h-4 w-4' />Register
+                    </button>
+                  </Link>
+                </>
+              )}
             </div>
           </div>
         )}

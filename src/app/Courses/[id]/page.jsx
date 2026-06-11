@@ -1,8 +1,13 @@
 import { Star } from "@gravity-ui/icons";
 import {Books} from '@gravity-ui/icons';
 import {ClockFill} from '@gravity-ui/icons';
+import { auth } from '@/lib/auth';
+import { headers } from 'next/headers';
+import { redirect } from 'next/navigation';
 
 const CourseDetailspage = async({params}) => {
+  const session = await auth.api.getSession({ headers: await headers() });
+  if (!session) redirect('/signin');
     const {id}=await params;
     console.log("id no:",id);
      const fetchdata= await fetch("http://localhost:3000/data.json")
