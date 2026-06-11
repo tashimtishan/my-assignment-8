@@ -10,7 +10,7 @@ const CourseDetailspage = async({params}) => {
   if (!session) redirect('/signin');
     const {id}=await params;
     console.log("id no:",id);
-     const fetchdata= await fetch("http://localhost:3000/data.json")
+     const fetchdata= await fetch("https://skillsphareapp.vercel.app/data.json",{cache:"no-store"})
     const datas=await fetchdata.json();
     const Coursedetail=datas.find(c=>c.id==id)
     console.log(Coursedetail)

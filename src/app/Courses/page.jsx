@@ -10,7 +10,7 @@ const [searchQuery, setSearchQuery]=useState("");
 const [loading, setLoading] = useState(true);
 
     useEffect(()=>{
-        fetch("http://localhost:3000/data.json")
+        fetch("https://skillsphareapp.vercel.app/data.json",{cache:"no-store"})
             .then(res=>res.json())
             .then(data=>{
                 setDatas(data);

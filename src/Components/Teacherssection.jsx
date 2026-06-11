@@ -1,6 +1,6 @@
 import {StarFill} from '@gravity-ui/icons';
 const Teacherssection = async() => {
-     const fetchdata= await fetch("http://localhost:3000/data.json")
+     const fetchdata= await fetch("https://skillsphareapp.vercel.app/data.json")
     const datas=await fetchdata.json();
      console.log(datas)
     return (

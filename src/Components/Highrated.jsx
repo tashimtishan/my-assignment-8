@@ -2,7 +2,7 @@ import { Star } from "@gravity-ui/icons";
 import Link from "next/link";
 
 const Highrated = async() => {
-     const fetchdata= await fetch("http://localhost:3000/data.json")
+     const fetchdata= await fetch("https://skillsphareapp.vercel.app/data.json",{cache:"no-store"})
     const datas=await fetchdata.json();
      console.log(datas)
     return (
